@@ -54,6 +54,32 @@ class Blockchain():
         index = self.last_block['index'] + 1
         return index
 
+    def proof_of_work(self, last_proof):
+        """
+
+        Args:
+            last_proof:
+
+        Returns:<int> proof
+
+        """
+        proof = 0
+        while
+
+    @staticmethod
+    def valid_proof(last_proof, proof):
+        """
+
+        Args:
+            last_proof:
+            proof:
+
+        Returns:
+
+        """
+        guess = f'{last_proof}{proof}'.encode()
+        return hashlib.sha256(guess).hexdigest()[:4] == "0000"
+
     @staticmethod
     def hash_block(block):
         block_string = json.dumps(block, sort_keys=True).encode()
