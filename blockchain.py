@@ -64,7 +64,10 @@ class Blockchain():
 
         """
         proof = 0
-        while
+        while self.valid_proof(last_proof, proof) is False:
+            proof += 1
+
+        return proof
 
     @staticmethod
     def valid_proof(last_proof, proof):
